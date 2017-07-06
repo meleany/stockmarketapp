@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html ng-app="stockapp">
+
+  <head>
+    <title>Stock-It</title>
+    <link href="/public/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/public/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Dosis', rel='stylesheet', type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abel', rel='stylesheet', type='text/css'>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	  <script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>    
+    <script type="text/javascript" src="public/themes/dark-unica.js"></script>    
+    <script src="public/amdat"></script>
+    <script src="public/goodat"></script>
+    <script type="text/javascript" src="controllers/clickController.client.js"></script>
+  </head>
+  
+  <body ng-controller="appController">
+    
+    <div class="headBox">
+      <h1>Stock<i class="fa fa-line-chart"></i>It</h1>
+      <h2>Follow the trends on the Real-time Stock Market Chart App.</h2>
+      <p>A non-commercial Back-End project for FreeCodeCamp</p>
+    </div>
+
+    <div class="searchBox">
+      <input type="text" placeholder="Stock Code (i.e. AMZN, GOOG, FB)" maxlength="20" ng-model="stockSymbol">
+      <input type="button" value="Add" ng-click="addStock()" search> 
+    </div>
+        
+    <div class="container">
+      <div id="chart" class="highstocks" options="chartOptions" series="stockData"></div>
+    </div>
+    
+    <div class="listBox">
+      <ul>
+        <li ng-repeat="code in stockList">
+          <div class="stockBox">
+            <a ng-click="removeStock(code)" id="delete"><i class="fa fa-times-circle fa-lg"></i></a>
+            <p>{{code}}</p>
+          </div>          
+        </li>
+      </ul>
+    </div>
+    
+    <div style="height:100px"></div> <!-- Div to create space to avoid the last results covered by the footer -->
+    
+    <footer>
+			<p id="copyright"> Copyright © 2017 Yasmin Melean </p>
+      <div id="links">
+			  <a href="https://www.freecodecamp.com/meleany" target="_blank">
+          <i class="fa fa-free-code-camp fa-2x fa-fw"></i>
+			  </a>
+			  <a href="https://github.com/meleany" target="_blank">
+				  <i class="fa fa-github-alt fa-2x"></i>
+			  </a>
+			  <a href="https://codepen.io/meleany" target="_blank">
+				  <i class="fa fa-codepen fa-2x"></i>
+			  </a>
+			  <a href="https://ymelbart.wordpress.com" target="_blank"> 
+				  <i class="fa fa-wordpress fa-2x"></i>
+			  </a>
+      </div>
+    </footer>
+  
+  </body>
+  
+</html>

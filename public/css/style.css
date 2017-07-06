@@ -1,0 +1,185 @@
+/***** Main Styling *****/
+
+body {
+  background-color: rgba(0, 0, 0, 1);
+  background-image: url("/public/images/Bckg02.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 95% auto;
+  color: rgb(255, 255, 255);
+  font-family: "Dosis";
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa {
+  vertical-align: middle;
+}
+
+/***** Footer Styling *****/
+
+footer {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  background-color: rgba(30, 30, 30, 0.95);
+  color: rgb(127, 255, 0);
+  font-family: "Abel";
+  font-size: 17px;  
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: inline-block;
+  padding: 2px;  
+}
+
+footer a {
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.9); 
+  padding: 8px;
+}
+
+footer .fa {
+  color: rgb(127, 255, 0);
+  font-size: 28px;  
+}
+
+#copyright {
+  float: left;
+  margin-left: 30px;
+}
+
+#links {
+  float: right;
+  margin-top: 15px;
+  margin-right: 40px;
+}
+
+/***** Head Styling *****/
+
+h1 {
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.9);  
+  font-family: "Suez One";
+  font-size: 65px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 70px;
+}
+
+h1 .fa {
+  padding: 15px;
+  font-size: 45px;
+  vertical-align: top;
+  color: rgb(173, 255, 47);
+}
+
+.headBox {
+  background-color: rgba(0, 24, 59, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: auto;
+  margin-top: 0;
+  width: 95%;
+}
+
+/***** Search Styling *****/
+
+input[type=text] {
+  border: 2px outset rgb(255, 255, 255);
+  border-right: 0;
+  font-family: "Dosis";
+  text-transform: uppercase;
+  border-radius: 5px 0px 0px 5px;
+  margin-right: 0px;
+  margin-left: 70px;
+  width: 20%;
+  padding: 5px;
+  padding-top: 7px;
+}
+
+input[type=button] {
+	background-color: rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+	font-family: "Dosis";
+	color: rgb(255, 255, 255);
+  font-size: 15px;
+  margin-left: 0px;
+	padding: 5px 20px;
+	text-align: center;
+  border-left: 0;
+	border-radius: 0px 10px 10px 0px;
+	cursor: pointer;
+}
+
+.searchBox {
+  background-color: rgba(0, 24, 59, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 0px;
+}
+
+/***** Charts Styling *****/
+
+.container {
+  margin: auto;
+  margin-top: 50px; 
+  margin-bottom: 30px;
+  width: 90%;  
+}
+
+#chart {
+  margin: auto;
+  width: 90%; 
+  height: 570px;
+}
+
+/***** List Styling *****/
+
+ul {
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  width: 90%;
+}
+
+li {
+  margin: 5px;
+  width: 24%;
+  float: left;
+}
+
+.listBox {
+  background-color: rgba(0, 24, 59, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.stockBox {
+	background-color: rgba(0, 0, 0, 0);  
+  border: 2px solid rgb(255,255,255);
+  border-radius: 15px;
+  width: 90%;
+  height: 60px;
+}
+
+#delete {
+  color: rgb(127, 255, 0);
+  float: right;
+  margin-top: 3px;
+  margin-right: 6px;
+}
+
+#delete:hover {
+  color: rgb(191, 255, 128);
+}
