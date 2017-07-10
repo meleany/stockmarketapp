@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "A Stock Market Chart App project for FreeCodeCamp Back-End Curriculum",
   "main": "server.js",
-  "engines": {
-    "node": "5.2.0",
-    "npm": "3.5.1"
-  },
   "scripts": {
     "start": "node server.js"
   },
