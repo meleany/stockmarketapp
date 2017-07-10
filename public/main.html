@@ -16,6 +16,7 @@
     <script type="text/javascript" src="public/themes/dark-unica.js"></script>    
     <script src="public/amdat"></script>
     <script src="public/goodat"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="controllers/clickController.client.js"></script>
   </head>
   
@@ -30,10 +31,14 @@
     <div class="searchBox">
       <input type="text" placeholder="Stock Code (i.e. AMZN, GOOG, FB)" maxlength="20" ng-model="stockSymbol">
       <input type="button" value="Add" ng-click="addStock()" search> 
+    </div>    
+    
+    <div id="ref">
+      <a href="http://www.nasdaq.com/screening/company-list.aspx" target="_blank">External LINK: Ref. of Companies and Codes</a>
     </div>
-        
+      
     <div class="container">
-      <div id="chart" class="highstocks" options="chartOptions" series="stockData"></div>
+      <div id="chart" class="highstocks" options="chartOptions" series="stockData" remove="remove" list="stockList"></div>
     </div>
     
     <div class="listBox">
